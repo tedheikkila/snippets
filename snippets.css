@@ -1,0 +1,74 @@
+/* selecting all elements (defaults); selecting by descending order (all, html, class, id) */
+* {
+    box-sizing: border-box;
+}
+
+/* selecting by html tag */
+body {
+    color: black
+}
+
+nav {
+    text-align: right;
+    margin-right: 20px
+}
+
+a {
+    text-decoration: none;
+}
+
+/* select by class */
+.section {
+    color: black;
+    text-align: center;
+}
+
+#list {
+    list-style-type: none;
+}
+
+/* select by id; display block is usually the default */
+#paragraph {
+    color: black;
+    /* display: inline; */
+    /* display: none; */
+    /* display: block */
+}
+
+/* adding dims to elements; 
+content area, padding area, border area;
+position: static, relative, fixed, absolute (top, bottom, left, right) */
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+    border: solid 5px black;
+    padding: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 30px;
+}
+
+form {
+    margin-top: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+textarea {
+    width: 60%;
+    height: 100px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3%;
+}
