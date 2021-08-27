@@ -1,9 +1,7 @@
-/* selecting all elements (defaults); selecting by descending order (all, html, class, id) */
 * {
     box-sizing: border-box;
 }
 
-/* selecting by html tag */
 body {
     color: black
 }
@@ -17,7 +15,6 @@ a {
     text-decoration: none;
 }
 
-/* select by class */
 .section {
     color: black;
     text-align: center;
@@ -27,12 +24,20 @@ a {
     list-style-type: none;
 }
 
-/* select by id; display block is usually the default */
+figure img:hover {
+    flex: 2 1;
+    box-shadow: 5px 5px 5px 5px orange;
+}
+
 #paragraph {
     color: black;
-    /* display: inline; */
-    /* display: none; */
-    /* display: block */
+    display: inline;
+}
+
+#sample-img {
+    transform: rotate(180deg);
+    transform: scale(1.5, 1);
+    transform: skew(15deg);
 }
 
 /* adding dims to elements; 
@@ -52,6 +57,10 @@ position: static, relative, fixed, absolute (top, bottom, left, right) */
     margin-left: 25%;
     margin-right: 25%;
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
 }
 
 form {
@@ -72,3 +81,36 @@ footer {
     text-align: center;
     margin-top: 3%;
 }
+
+aside div {
+    color: blue;
+    text-align: center;
+}
+
+/* pc */
+@media screen and (max-width: 992px) {
+    header {
+      background: blue;
+    }
+
+    .box {
+        background-color: red;
+        align-items: center;
+    }
+  }
+  
+  /* tablet  */
+  @media screen and (max-width: 768px) {
+    aside div {
+      background-color: yellow;
+      order: 2
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    footer {
+      background-color: blue;
+      height: calc(100vh - 200px);
+      flex-shrink: 0
+    }
+  }

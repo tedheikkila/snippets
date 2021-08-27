@@ -12,15 +12,12 @@
 
 <body>
 
-    <!-- header semantic -->
     <header>Header</header>
 
-    <!-- nav area w/page redirect -->
     <nav>
         <a href=#paragraph>Go to p tag</a>
     </nav>
 
-    <!-- h1-h6 tags (bigger the number, the small the text render) -->
     <h1>h1</h1>
     <h2>h2</h2>
     <h2>h3</h2>
@@ -29,44 +26,47 @@
     <h5>h6</h5>
     <h6>h7</h6>
 
-    <!-- section p, img, a, ul, li, figure, figcaption -->
-    <section class="section">
-        <p id="paragraph">p tag</p>
-        <figure>
-            <img src="./images/sample.jpg" alt="something" width="100" height="100" />
-            <figcaption>Fig Caption</figcaption>
-            <a href="https://www.google.com/?gws_rd=ssl">Link to Google</a>
-        </figure>
-        <ul id="list">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-        </ul>
-    </section>
+    <main>
+        <section class="section">
+            <p id="paragraph">p tag</p>
+            <figure>
+                <img id="sample-img" src="./images/sample.jpg" alt="something" width="100" height="100" />
+                <figcaption>Fig Caption</figcaption>
+                <a href="https://www.google.com/?gws_rd=ssl">Link to Google</a>
+            </figure>
+            <ul id="list">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </section>
 
-    <!-- border box manipulation -->
-    <section class="box">
-        <h2>Border Box</h2>
-    </section>
+        <section class="box">
+            <h2>Box</h2>
+        </section>
 
-    <!-- form (label, input (text, email, #, pw), button) -->
-    <form>
-        <label for=hello>Text</label>
-        <input type=text name=hello>
-        <label for=email>Email</label>
-        <input type=email name=email>
-        <label for=number>Number</label>
-        <input type=number name=number>
-        <label for=password name=password>Password</label>
-        <input type=password name=password>
-        <button type=submit id="form-btn">Submit</button>
-    </form>
+        <form>
+            <label for=hello>Text</label>
+            <input type=text name=hello>
+            <label for=email>Email</label>
+            <input type=email name=email>
+            <label for=number>Number</label>
+            <input type=number name=number>
+            <label for=password name=password>Password</label>
+            <input type=password name=password>
+            <button type=submit id="form-btn">Submit</button>
+        </form>
 
-    <textarea placeholder="Type here for placeholder"></textarea>
+        <textarea placeholder="Type here for placeholder"></textarea>
 
-    <!-- footer semantic -->
+        <aside>Aside
+            <br>
+            The legendary br tag
+            <br>
+            <div>Div it</div>
+        </aside>
+    </main>
+
     <footer>Footer</footer>
-
 </body>
-
 </html>
