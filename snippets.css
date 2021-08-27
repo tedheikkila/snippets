@@ -2,18 +2,41 @@
     box-sizing: border-box;
 }
 
+:root {
+    --one: rgb(34, 19, 19);
+    --two: rgb(223, 223, 77); 
+    --three: rgb(151, 20, 20);
+}
+
 body {
-    color: black
+    color: var(--one);
+    min-height: 100vh;
+    line-height: 1.5;
+    font-weight: 900;
+    font-style: normal
 }
 
 nav {
     text-align: right;
-    margin-right: 20px
+    margin-right: 20px;
+}
+
+nav::after {
+    content: '\273A';
+}
+
+nav::before {
+    content: '\273A';
 }
 
 a {
     text-decoration: none;
 }
+
+.children code:nth-child(even) {
+    background-color: #b9c6ae;
+    color: #13293d;
+  }
 
 .section {
     color: black;
@@ -38,6 +61,7 @@ figure img:hover {
     transform: rotate(180deg);
     transform: scale(1.5, 1);
     transform: skew(15deg);
+    border: solid 5px black
 }
 
 /* adding dims to elements; 
@@ -68,6 +92,15 @@ form {
     margin-left: 20%;
     margin-right: 20%;
 }
+
+#form-btn:hover {
+    background-color: red;
+}
+
+#form-btn:active {
+    font-size: 180%;
+    box-shadow: 0 0 10px #000 inset;
+  }
 
 textarea {
     width: 60%;
