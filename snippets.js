@@ -29,7 +29,7 @@ console.log(a * b)
 console.log(a / b)
 console.log(a % b)
 console.log(b == c)
-console.log( b === c)
+console.log(b === c)
 
 let exp1 = (b == c)
 let exp2 = (a > b)
@@ -40,6 +40,30 @@ console.log(exp1 || !exp2)
 
 let exp3 = (a + b - c * a / b)
 console.log(exp3)
+
+// conditionals 
+let funLevel = 100
+const havingFun = true
+let funCost = 20
+
+if (funLevel === 100) {
+    console.log(`That's so ` + havingFun + `: ` + "Having lots of fun here")
+} else {
+    console.log(`That's so ` + !havingFun + `: ` + "Feeling kinda apathetic")
+}
+
+if (funCost > 25) {
+    console.log("Too much fun to be had")
+} else if (funCost > 10 & funCost < 25) {
+    console.log("Just the right amount of fun")
+} else console.log("C'mon have more fun already")
+
+// arrays 
+
+
+
+
+
 
 
 
