@@ -8,12 +8,18 @@
     --three: rgb(151, 20, 20);
 }
 
+
+html {
+    font-size: 1.5rem
+}
+
 body {
     color: var(--one);
     min-height: 100vh;
     line-height: 1.5;
     font-weight: 900;
-    font-style: normal
+    font-style: normal;
+    font-size: 80%
 }
 
 nav {
@@ -61,7 +67,10 @@ figure img:hover {
     transform: rotate(180deg);
     transform: scale(1.5, 1);
     transform: skew(15deg);
-    border: solid 5px black
+    border: solid 5px black;
+    outline: solid 10px var(--three);
+    outline-offset: -5px;
+    transition: all 0.5s ease-in-out;
 }
 
 /* adding dims to elements; 
@@ -83,24 +92,35 @@ position: static, relative, fixed, absolute (top, bottom, left, right) */
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    transition: flex-basis 500ms linear;
+
 }
 
 form {
     margin-top: 30px;
     margin-left: 20%;
     margin-right: 20%;
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    background-image: linear-gradient(
+    rgba(50, 53, 226, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
+}
+
+form:active {
+    user-select: all;
 }
 
 #form-btn:hover {
-    background-color: red;
-}
-
-#form-btn:active {
     font-size: 180%;
     box-shadow: 0 0 10px #000 inset;
-  }
+    background-color: red;
+
+}
 
 textarea {
     width: 60%;
@@ -136,7 +156,9 @@ aside div {
   @media screen and (max-width: 768px) {
     aside div {
       background-color: yellow;
-      order: 2
+      order: 2;
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
     }
   }
   
