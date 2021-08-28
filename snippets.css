@@ -39,6 +39,10 @@ a {
     text-decoration: none;
 }
 
+.children {
+    color: red
+}
+
 .children code:nth-child(even) {
     background-color: #b9c6ae;
     color: #13293d;
