@@ -59,8 +59,17 @@ if (funCost > 25) {
 } else console.log("C'mon have more fun already")
 
 // arrays 
-
-
+let games = ["Fortnite", "Tetris", "Warzone", "Halo"]
+console.log(games)
+console.log(games[0])
+games[0] = "Marvel"
+console.log(games[0])
+console.log(games.length)
+games[5] = "Fortnite"
+console.log(games)
+if (games[4] == null) {
+    console.log("empty is the best game ever")
+}
 
 
 
