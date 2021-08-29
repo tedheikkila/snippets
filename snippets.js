@@ -19,9 +19,9 @@ studentAge = false
 console.log(typeof(studentAge))
 
 // operators
-let a = 500
-let b = 50
-let c = "50"
+let a = 300
+let b = 30
+let c = "30"
 
 console.log(a + b)
 console.log(a - b)
@@ -30,6 +30,7 @@ console.log(a / b)
 console.log(a % b)
 console.log(b == c)
 console.log(b === c)
+console.log(`My army is ${a} Spartans strong because THIS IS SPARTA`)
 
 let exp1 = (b == c)
 let exp2 = (a > b)
@@ -68,7 +69,7 @@ console.log(games.length)
 games[5] = "Fortnite"
 console.log(games)
 if (games[4] == null) {
-    console.log("empty is the best game ever")
+    console.log("Empty is the best game ever. It's graphics feel so real")
 }
 
 
