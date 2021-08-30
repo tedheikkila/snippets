@@ -91,23 +91,53 @@ let y = "goodbye"
 testRun(x, y)
 
 const realRun = (z) => {
-    let realDeal = "Follow the arrow and " + z
+    let realDeal = "Follow the arrow function syntax " + z
     console.log(realDeal)
     return 
 }
 
-let z = "get real"
+let z = "to get with it"
 
 realRun(z)
 
-//methods 
+//methods; extensive array methods list: https://www.w3schools.com/js/js_array_methods.asp
+let alphabetList = ["b", "a", "d", "e", "c"]
+let numberList = [0, 1, 2, 3, 4]
+alphabetList.push("f")
+alphabetList.unshift("z")
+console.log(alphabetList)
+alphabetList.splice(0,2)
+alphabetList.pop()
+alphabetList.splice(6, 0, "g", "h", "i")
+alphabetList.splice(2, 0, "b")
+alphabetList.splice(5, 0, "f")
+console.log(alphabetList.sort())
 
+let alphaNumerical = alphabetList.concat(numberList)
+console.log(alphaNumerical.sort())
+alphaNumerical.splice(10, 0, 5, 6, 7, 8)
+console.log(alphaNumerical)
+let newAlphaNum = alphaNumerical.slice(0, 10)
+console.log(newAlphaNum)
 
+//objects and "this"
+console.log(this)
 
+let president = {
+    firstName: "George",
+    lastName: "Washington",
+    age: 75,
+    wasCool: true,
+    wasLame: false,
+    presFcn() {
+        console.log(`${this.firstName} ${this.lastName}` + " was the first president")
+    },
+    otherCoolPresidents: ["Taft", "Lincoln", "Obama"]
+}
 
+console.log(president)
+console.log(president.wasCool)
+console.log(president["wasLame"])
+console.log(`${president.otherCoolPresidents[1]} was another cool president`)
 
-
-
-
-
-
+president.presFcn()
