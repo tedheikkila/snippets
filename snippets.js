@@ -60,7 +60,7 @@ if (funCost > 25) {
 } else console.log("C'mon have more fun already")
 
 // arrays 
-let games = ["Fortnite", "Tetris", "Warzone", "Halo"]
+let games = ["Fortnite", "Tetris", "Warzone", "Pokemon", "Halo"]
 console.log(games)
 console.log(games[0])
 games[0] = "Marvel"
@@ -71,6 +71,40 @@ console.log(games)
 if (games[4] == null) {
     console.log("Empty is the best game ever. It's graphics feel so real")
 }
+
+//iteration
+for (let i = 0; i < games.length; i++) {
+    if (games[4] == null) {
+        console.log("Add a game at games[4]")
+    } else 
+        console.log(`Game ${i} = ${games[i]}`)
+}
+
+//functions and scope
+function testRun(x,y) {
+    console.log(x.toLowerCase() + "this is just a test run. " + y.toUpperCase())
+}
+
+let x = "Hello there, "
+let y = "goodbye"
+
+testRun(x, y)
+
+const realRun = (z) => {
+    let realDeal = "Follow the arrow and " + z
+    console.log(realDeal)
+    return 
+}
+
+let z = "get real"
+
+realRun(z)
+
+//methods 
+
+
+
+
 
 
 
