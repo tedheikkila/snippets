@@ -19,6 +19,11 @@
 - git branch -M main (selects the main to be the default push)
 - git push -u origin main (sets first push to go to main)
 - git branch (tells you which branch your on; very handy)
-
+- git checkout -b {your-branch-name} (creates a new branch off of current main)
+- git checkout main (gets you back to main)
+- git checkout {your-branch-name} (switches to your branch)
+- git merge main (ensure you're back on your branch; merges main with the branch you're on)
+- git branch -d {your-branch-name} (deletes a branch; ensure you're on main and main is working)
+- git branch -D {your-branch-name} (deletes a branch w/no warning; not recommended)
 
 
