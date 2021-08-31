@@ -141,3 +141,31 @@ console.log(president["wasLame"])
 console.log(`${president.otherCoolPresidents[1]} was another cool president`)
 
 president.presFcn()
+
+//prompts and alerts (don't use alerts but whatever for this case)
+let sillyWords = []
+
+const sillyGame = () => {
+    // generates random index based on [options] (FYI only)
+        // var index = Math.floor(Math.random() * options.length);
+    let sillyWord = window.prompt("Enter a silly word")
+    if (sillyWord == "") {
+    window.alert("Try again")
+    } else if (!sillyWord) {
+    return
+    } else
+
+    sillyWords.push(sillyWord)
+    console.log(sillyWords)
+
+    let replay = window.confirm("Enter another silly word?")
+    if (replay) {
+        sillyGame()
+    } else return
+}
+
+const sillyBtn = document.querySelector("#silly-game-btn")
+sillyBtn.addEventListener("click", sillyGame)
+
+
+
