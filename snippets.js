@@ -158,7 +158,7 @@ const sillyGame = () => {
     sillyWords.push(sillyWord)
     console.log(sillyWords)
 
-    let replay = window.confirm("Enter another silly word?")
+    let replay = window.confirm("Enter another silly word")
     if (replay) {
         sillyGame()
     } else return
@@ -167,5 +167,17 @@ const sillyGame = () => {
 const sillyBtn = document.querySelector("#silly-game-btn")
 sillyBtn.addEventListener("click", sillyGame)
 
+// DOM traversal and attribute settings
+console.log(window.document.body.children[4].children[0].children[0].innerHTML)
+let superPeeChild = window.document.body.children[4].children[0].children[0]
+superPeeChild.style.color = "white"
+superPeeChild.style.background = "blue"
 
+let buttonTags = document.querySelectorAll("button")
+let divTags = document.querySelectorAll("div")
 
+buttonTags[0].setAttribute("style", "font-size: 30px; background: orange; color: blue; padding: 20px")
+
+for (let i = 0; i < divTags.length; i++) {
+    divTags[i].setAttribute("style", "color: blue")
+}
