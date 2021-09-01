@@ -167,7 +167,7 @@ const sillyGame = () => {
 const sillyBtn = document.querySelector("#silly-game-btn")
 sillyBtn.addEventListener("click", sillyGame)
 
-// DOM traversal and attribute settings
+// DOM traversal, attribute settings, creating/appending
 console.log(window.document.body.children[4].children[0].children[0].innerHTML)
 let superPeeChild = window.document.body.children[4].children[0].children[0]
 superPeeChild.style.color = "white"
@@ -181,3 +181,11 @@ buttonTags[0].setAttribute("style", "font-size: 30px; background: orange; color:
 for (let i = 0; i < divTags.length; i++) {
     divTags[i].setAttribute("style", "color: blue")
 }
+
+let appendDiv = document.querySelector("#append-here")
+let createADiv = document.createElement("div")
+createADiv.textContent = "Hello dudes and dudettes!"
+createADiv.style.textAlign = "center"
+appendDiv.append(createADiv)
+
+// timers & intervals 
