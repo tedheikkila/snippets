@@ -214,21 +214,39 @@ sendMessage = () => {
 
 setTime()
 
-//event listener & theme switcher
+//event listener, prevent default, theme switcher
 let darkSwitch = document.querySelector("#dark-switcher")
 let lightSwitch = document.querySelector("#light-switcher")
 let theme = document.querySelector("body")
 
 theme.style.background = "white"
 
-darkSwitch.addEventListener("click", function() {
+darkSwitch.addEventListener("click", function(event) {
+    event.preventDefault()
     if(darkSwitch) {
         theme.style.background = "lightblue"
     } 
 })
 
-lightSwitch.addEventListener("click", function() {
+lightSwitch.addEventListener("click", function(event) {
+    event.preventDefault()
     if(lightSwitch) {
         theme.style.background = "white"
     } 
+})
+
+//keydown events
+let keyedEvent = document.querySelector("#textarea-keydown")
+let output = document.querySelector("#output")
+
+keyedEvent.addEventListener("keydown", function(event) {
+    let key = event.key.toLowerCase()
+    console.log(key)
+    let characters = 'abcdefghijklmnopqrstuvwxyz '
+
+    if(characters.includes(key)) {
+        output.innerHTML += key
+    } else if (key =='backspace') {
+        output.innerHTML = ""
+    } else output.innerHTML = "Enter a letter smarty pants"
 })
