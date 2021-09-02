@@ -189,3 +189,46 @@ createADiv.style.textAlign = "center"
 appendDiv.append(createADiv)
 
 // timers & intervals 
+let secondsLeft = 10;
+let timeEl = document.querySelector("#timer")
+
+setTime = () => {
+  let timerInterval = setInterval(function() {
+    secondsLeft--;
+    timeEl.textContent = secondsLeft + " seconds until possible demise";
+
+    if(secondsLeft === 0) {
+      clearInterval(timerInterval);
+      sendMessage();
+    }
+
+  }, 1000);
+}
+
+sendMessage = () => {
+    let surviveMessage = document.createElement("p")
+    surviveMessage.textContent = "You barely survived"
+    surviveMessage.setAttribute("style", "color:green; font-size: 20px")
+    timeEl.append(surviveMessage)
+}
+
+setTime()
+
+//event listener & theme switcher
+let darkSwitch = document.querySelector("#dark-switcher")
+let lightSwitch = document.querySelector("#light-switcher")
+let theme = document.querySelector("body")
+
+theme.style.background = "white"
+
+darkSwitch.addEventListener("click", function() {
+    if(darkSwitch) {
+        theme.style.background = "lightblue"
+    } 
+})
+
+lightSwitch.addEventListener("click", function() {
+    if(lightSwitch) {
+        theme.style.background = "white"
+    } 
+})
