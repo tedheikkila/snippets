@@ -2,7 +2,7 @@
 
 all the snippets you could ever possibly need
 
-### _basics:
+### basics:
 - assets/ = sample image
 - index = unique html tags
 - style = unique css selectors & attributes
