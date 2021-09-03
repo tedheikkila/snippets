@@ -235,7 +235,11 @@ lightSwitch.addEventListener("click", function(event) {
     } 
 })
 
-//keydown events
+//keydown events & changing img attributes (not really used)
+
+//also event.currentTarget & event.stopPropagation()
+// element.dataset.state = "animate" 
+
 let keyedEvent = document.querySelector("#textarea-keydown")
 let output = document.querySelector("#output")
 
@@ -250,3 +254,28 @@ keyedEvent.addEventListener("keydown", function(event) {
         output.innerHTML = ""
     } else output.innerHTML = "Enter a letter smarty pants"
 })
+
+//localStorage (set and get)
+let addOne = document.querySelector("#add-one")
+let subtractOne = document.querySelector("#subtract-one")
+let numCounter = document.querySelector("#number-counter")
+
+let count = localStorage.getItem("count")
+
+numCounter.textContent = count
+
+addOne.addEventListener("click", function() {
+    count++
+    numCounter.textContent = count
+    localStorage.setItem("count", count)
+})
+
+subtractOne.addEventListener("click", () => {
+    if(count>0) {
+        count--
+        numCounter.textContent = count
+        localStorage.setItem("count", count)
+    } else console.log("User hit 0")
+})
+
+//localStorage (set JSON stringify; get JSON parse)
