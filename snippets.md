@@ -20,6 +20,7 @@
 - git push -u origin main (sets first push to go to main)
 - git branch (tells you which branch your on; very handy)
 - git checkout -b {your-branch-name} (creates a new branch off of current main)
+- git push origin {your-branch-name} (push branch up to GitHub; then submit pull request)
 - git checkout main (gets you back to main)
 - git checkout {your-branch-name} (switches to your branch)
 - git merge main (ensure you're back on your branch; merges main with the branch you're on)
