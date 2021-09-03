@@ -279,3 +279,37 @@ subtractOne.addEventListener("click", () => {
 })
 
 //localStorage (set JSON stringify; get JSON parse)
+let userText = document.querySelector("#text-input")
+let userEmail = document.querySelector("#email-input")
+let userNumber = document.querySelector("#number-input")
+let formBtn = document.querySelector("#form-btn")
+let userOutput = document.querySelector("#user-text")
+
+formBtn.addEventListener("click", function(event) {
+    event.preventDefault()
+
+    const user = {
+        text: userText.value.trim(),
+        email: userEmail.value.trim(),
+        number: userNumber.value.trim()
+    }
+    localStorage.setItem("user", JSON.stringify(user))
+    consoleUser()
+    userText.value = ""
+    userEmail.value = ""
+    userNumber.value = ""
+})
+
+const consoleUser = () => {
+    let userInfo = JSON.parse(localStorage.getItem("user"))
+    if (!userInfo) {
+        return
+    } else
+    userOutput.textContent = userInfo.text
+}
+
+consoleUser()
+
+
+
+
