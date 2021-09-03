@@ -2,7 +2,9 @@
 
 all the snippets you could ever possibly need
 
-- snippets.html = unique html tags
-- snippets.css = unique css selectors & attributes
-- snippets.js = unique javascript lines
-- snippets.md = unique terminal & git commands
+### _basics:
+- assets/ = sample image
+- index = unique html tags
+- style = unique css selectors & attributes
+- script = unique javascript lines
+- terminal = unique terminal & git commands

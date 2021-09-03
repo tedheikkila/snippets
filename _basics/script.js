@@ -309,7 +309,3 @@ const consoleUser = () => {
 }
 
 consoleUser()
-
-
-
-
