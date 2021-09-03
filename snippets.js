@@ -237,8 +237,8 @@ lightSwitch.addEventListener("click", function(event) {
 
 //keydown events & changing img attributes (not really used)
 
-//also event.currentTarget & event.stopPropagation()
-// element.dataset.state = "animate" 
+// also event.currentTarget & event.stopPropagation()
+// this is used to change to new data state >> element.dataset.state = "animate" 
 
 let keyedEvent = document.querySelector("#textarea-keydown")
 let output = document.querySelector("#output")
