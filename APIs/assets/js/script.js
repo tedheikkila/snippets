@@ -9,7 +9,7 @@ title.css('border', 'rgb(247, 88, 88) 10px solid')
 root.append(title)
 root.append('<h3>Your Top Six Champs:</h3>')
 
-let champs = ['Blade', 'Colossus', 'Sentinel', 'CGR', 'Claire Voyant', 'Captain IW']
+let champs = ['Blade', 'Colossus', 'Sentinel', 'CGR', 'Claire', 'Cap IW']
 let champClass = ['Skill', 'Mutant', 'Tech', 'Cosmic', 'Mystic', 'Science']
 
 for (let i = 0; i < champs.length; i++) {
