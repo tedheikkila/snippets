@@ -77,6 +77,26 @@ refreshBtn.on('click', () => {
 })
 
 //jQuery forms
+let champForm = $('#champ-form');
+let champName = $('input[name="champ-name"]');
+
+function handleChampSubmit(event) {
+  event.preventDefault();
+
+  let classSelect = $('input:checked').val();
+  let upperClass = classSelect.charAt(0).toUpperCase() + classSelect.slice(1);
+  
+  console.log('Champion:', champName.val());
+  console.log('Class:', upperClass);
+
+  $('input[type="text"]').val('');
+  $('input[type="radio"]').prop('checked', false);
+}
+
+champForm.on('submit', handleChampSubmit);
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <meta charset="UTF-8" />
   <title>APIs</title>
@@ -24,6 +24,53 @@
       Refresh
     </button>
   </main>
+
+  <div class="bg-dark flex-row align-center justify-center">
+    <div class="col-11 col-sm-8">
+      <h1 class="text-light">Enter a Champ</h1>
+      <div class="card rounded bg-light p-3">
+        <div class="card-body">
+          <form id="champ-form">
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <input type="text" class="form-input" name="champ-name" placeholder="Champion's name" />
+              </div>
+            </div>
+            <fieldset class="group">
+              <legend>Select class</legend>
+              <ul class="class-radio">
+                <span>
+                  <input type="radio" id="r1" value="skill" name="champ-select"/>
+                  <label for="r1">Skill</label>
+                </span>
+                <span>
+                  <input type="radio" id="r2" value="mutant" name="champ-select"/>
+                  <label for="r2">Mutant</label>
+                </span>
+                <span>
+                  <input type="radio" id="r3" value="tech" name="champ-select"/>
+                  <label for="r3">Tech</label>
+                </span>
+                <span>
+                  <input type="radio" id="r4" value="cosmic" name="champ-select"/>
+                  <label for="r4">Cosmic</label>
+                </span>
+                <span>
+                  <input type="radio" id="r5" value="mystic" name="champ-select"/>
+                  <label for="r5">Skill</label>
+                </span>
+                <span>
+                  <input type="radio" id="r6" value="science" name="champ-select"/>
+                  <label for="r6">Mutant</label>
+                </span>
+              </ul>
+            </fieldset>
+            <button class="btn btn-block btn-danger">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="./assets/js/script.js"></script>
