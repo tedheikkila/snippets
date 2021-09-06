@@ -35,7 +35,7 @@ let refreshBtn = $('#refresh-btn')
 let isDark = true;
 
 welcomeBtn.on('click', () => {
-  alert("Marvel Contest of Champions (MCOC):\n-Mobile fighter game based on Marvel\n-Each champ has a specific class\nThere are six classes:\n1. Skill\n2. Mutant\n3. Tech\n4. Cosmic\n5. Mystic\n6. Science")
+  alert("Marvel Contest of Champions (MCOC):\n-Mobile fighter game based on Marvel\n-Each champ has a specific class\nThere are six classes:\n1. Skill\n2. Mutant\n3. Tech\n4. Cosmic\n5. Mystic\n6. Science\n-Select bosses belong to the 7th class, Superior")
 })
 
 themeBtn.on('click', () => {
@@ -76,7 +76,7 @@ refreshBtn.on('click', () => {
   location.reload()
 })
 
-//jQuery forms
+//jQuery forms & DOM traversal
 let champForm = $('#champ-form');
 let champName = $('input[name="champ-name"]');
 
@@ -85,7 +85,7 @@ function handleChampSubmit(event) {
 
   let classSelect = $('input:checked').val();
   let upperClass = classSelect.charAt(0).toUpperCase() + classSelect.slice(1);
-  
+
   console.log('Champion:', champName.val());
   console.log('Class:', upperClass);
 
@@ -94,6 +94,13 @@ function handleChampSubmit(event) {
 }
 
 champForm.on('submit', handleChampSubmit);
+
+$('.class-radio').children().eq(5).append($(`
+<span>
+  <input type="radio" id="r7" value="superior" name="champ-select"/>
+  <label for="r7">Superior</label>
+</span>`));
+
 
 
 
