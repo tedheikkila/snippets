@@ -1,3 +1,4 @@
+
 .classy {
   font-size: 30px;
   color: rgb(247, 88, 88);
@@ -12,8 +13,12 @@ h3 {
   margin-bottom: 20px;
 }
 
+span {
+  margin: 10px;
+}
+
 .champ-type-1 {
-  color: red
+  color: red;
 }
 
 .champ-type-2 {
@@ -25,13 +30,19 @@ h3 {
 }
 
 .champ-type-4 {
-  color: lightskyblue
+  color: rgb(107, 252, 252)
 }
 
 .champ-type-5 {
-  color: violet
+  color: rgb(255, 96, 255)
 }
 
 .champ-type-6 {
   color: rgb(5, 228, 5)
+}
+
+main {
+  margin: 3rem auto;
+  max-width: 90vw;
+  width: 40ch;
 }
