@@ -40,7 +40,7 @@ welcomeBtn.on('click', () => {
 
 themeBtn.on('click', () => {
   if (isDark) {
-    $('body').css({ 'background-color': 'gray', color: '#1a1a1a' });
+    $('body').css({ 'background-color': 'rgb(61, 43, 43)', color: '#1a1a1a' });
     isDark = !isDark;
   } else {
     $('body').css({ 'background-color': '#1a1a1a', color: '#d9e9e8' });
@@ -120,6 +120,9 @@ bossList.on('click', '.villain', function (event) {
     break
   }
 });
+
+// Bootstrap; see index.html (components, layouts, utils, extensions)
+// Neat shortcut: https://hackerthemes.com/bootstrap-cheatsheet/
 
 
 

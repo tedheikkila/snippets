@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <title>APIs</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="./assets/css/jass.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 
-<body class="bg-dark text-light text-center">
+<body class="text-light text-center" id="mcoc-body">
   <div class="m-5" id="root"></div>
 
   <main>
@@ -25,7 +26,7 @@
     </button>
   </main>
 
-  <div class="bg-dark flex-row align-center justify-center">
+  <div class="bg-dark flex-row align-center justify-center p-2">
     <div class="col-11 col-sm-8">
       <h1 class="text-light">Enter a Champ</h1>
       <div class="card rounded bg-light p-3">
@@ -40,27 +41,27 @@
               <legend>Select class</legend>
               <ul class="class-radio">
                 <span>
-                  <input type="radio" id="r1" value="skill" name="champ-select"/>
+                  <input type="radio" id="r1" value="skill" name="champ-select" />
                   <label for="r1">Skill</label>
                 </span>
                 <span>
-                  <input type="radio" id="r2" value="mutant" name="champ-select"/>
+                  <input type="radio" id="r2" value="mutant" name="champ-select" />
                   <label for="r2">Mutant</label>
                 </span>
                 <span>
-                  <input type="radio" id="r3" value="tech" name="champ-select"/>
+                  <input type="radio" id="r3" value="tech" name="champ-select" />
                   <label for="r3">Tech</label>
                 </span>
                 <span>
-                  <input type="radio" id="r4" value="cosmic" name="champ-select"/>
+                  <input type="radio" id="r4" value="cosmic" name="champ-select" />
                   <label for="r4">Cosmic</label>
                 </span>
                 <span>
-                  <input type="radio" id="r5" value="mystic" name="champ-select"/>
+                  <input type="radio" id="r5" value="mystic" name="champ-select" />
                   <label for="r5">Skill</label>
                 </span>
                 <span>
-                  <input type="radio" id="r6" value="science" name="champ-select"/>
+                  <input type="radio" id="r6" value="science" name="champ-select" />
                   <label for="r6">Mutant</label>
                 </span>
               </ul>
@@ -80,6 +81,58 @@
     <button class="btn btn-primary villain">The Grandmaster</button>
   </div>
 
+  <div class="web-references bg-dark">
+    <h2>Best Web References/Guides</h2>
+    <section class="row justify-content-around" id="references-section">
+      <div class="col-12 col-sm-6 col-lg-4 mb-3">
+        <div class="card">
+          <h3 class="card-header bg-danger" id="header-card">
+            Aunt Mai
+          </h3>
+          <div class="card-body">
+            <p class="card-text">
+              Great filter options by champ release date, 
+              attack, hp, immunities, etc. Prestige calculator. 
+              Easy to read abilities and synergies. Top players go-to option
+            </p>
+            <a href="https://auntm.ai/home/" target="_blank" class="btn btn-block btn-success">Go Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 mb-3">
+        <div class="card">
+          <h3 class="card-header bg-dark" id="header-card">
+            Dunres
+          </h3>
+          <div class="card-body">
+            <p class="card-text">
+              Great for quick visual on the MCOC champ tier list. 
+              Extensive buffs and debuffs list
+            </p>
+            <a href="https://www.dunres.sk/mcoc/champions/" target="_blank" class="btn btn-block btn-success">Go Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 mb-3">
+        <div class="card">
+          <h3 class="card-header bg-danger" id="header-card">
+            MCOC Guide
+          </h3>
+          <div class="card-body">
+            <p class="card-text">
+              Updated frequently. 
+              Web creators appear to be active players, knowledgeable, and unbiased to popular opinion
+            </p>
+            <a href="https://www.mcoc-guide.com/" target="_blank" class="btn btn-block btn-success">Go Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
