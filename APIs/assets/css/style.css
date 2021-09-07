@@ -1,4 +1,12 @@
 /* note can always add class or id to extend bootstrap component */
+/* * selector contains Google Font family 
+      https://fonts.google.com/
+*/
+
+* {
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
 
 .classy {
   font-size: 30px;
