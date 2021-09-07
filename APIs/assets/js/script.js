@@ -76,7 +76,7 @@ refreshBtn.on('click', () => {
   location.reload()
 })
 
-//jQuery forms & DOM traversal
+//jQuery forms
 let champForm = $('#champ-form');
 let champName = $('input[name="champ-name"]');
 
@@ -95,11 +95,33 @@ function handleChampSubmit(event) {
 
 champForm.on('submit', handleChampSubmit);
 
+//DOM traversal
 $('.class-radio').children().eq(5).append($(`
 <span>
   <input type="radio" id="r7" value="superior" name="champ-select"/>
   <label for="r7">Superior</label>
 </span>`));
+
+// event delegation
+let bossList = $(".villain-list")
+
+bossList.on('click', '.villain', function (event) {
+  let selectedBoss = event.target.innerHTML
+  switch (selectedBoss) {
+    case "Kang": console.log(selectedBoss + ' is the 1st boss (Tech class)')
+    break
+    case "Thanos": console.log(selectedBoss + ' is the 2nd boss (Cosmic class)')
+    break
+    case "Maestro": console.log(selectedBoss + ' is the 3rd boss (Superior class)')
+    break
+    case "The Collector": console.log(selectedBoss + ' is the 4th boss (Superior class)')
+    break
+    case "The Grandmaster": console.log(selectedBoss + ' is the 5th and final boss (Superior class)')
+    break
+  }
+});
+
+
 
 
 
