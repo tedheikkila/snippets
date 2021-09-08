@@ -1,7 +1,8 @@
-/* note can always add class or id to extend bootstrap component */
-/* * selector contains Google Font family 
-      https://fonts.google.com/
-*/
+/* note can always add class or id to extend bootstrap or jass component */
+:root {
+  --red: rgb(247, 88, 88);
+  --white: white;
+}
 
 * {
   box-sizing: border-box;
@@ -10,7 +11,7 @@
 
 .classy {
   font-size: 30px;
-  color: rgb(247, 88, 88);
+  color: var(--white);
   background-color: black;
   border-radius: 2em;
   width: 300px;

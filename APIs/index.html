@@ -92,8 +92,8 @@
           </h3>
           <div class="card-body">
             <p class="card-text">
-              Great filter options by champ release date, 
-              attack, hp, immunities, etc. Prestige calculator. 
+              Great filter options by champ release date,
+              attack, hp, immunities, etc. Prestige calculator.
               Easy to read abilities and synergies. Top players go-to option
             </p>
             <a href="https://auntm.ai/home/" target="_blank" class="btn btn-block btn-success">Go Now</a>
@@ -107,7 +107,7 @@
           </h3>
           <div class="card-body">
             <p class="card-text">
-              Great for quick visual on the MCOC champ tier list. 
+              Great for quick visual on the MCOC champ tier list.
               Extensive buffs and debuffs list
             </p>
             <a href="https://www.dunres.sk/mcoc/champions/" target="_blank" class="btn btn-block btn-success">Go Now</a>
@@ -121,7 +121,7 @@
           </h3>
           <div class="card-body">
             <p class="card-text">
-              Updated frequently. 
+              Updated frequently.
               Web creators appear to be active players, knowledgeable, and unbiased to popular opinion
             </p>
             <a href="https://www.mcoc-guide.com/" target="_blank" class="btn btn-block btn-success">Go Now</a>
@@ -146,12 +146,47 @@
   </div> -->
 
   <ul id="sortable" class="list-group">Arrange favorite OG Avenger (hi to low)
-    <li class="ui-state-default list-group-item">Thor</li>
-    <li class="ui-state-default list-group-item">Hulk</li>
-    <li class="ui-state-default list-group-item">Black Widow</li>
+    <li class="ui-state-default list-group-item bg-warning">Thor</li>
+    <li class="ui-state-default list-group-item bg-success">Hulk</li>
+    <li class="ui-state-default list-group-item bg-danger">Black Widow</li>
     <li class="ui-state-default list-group-item">Iron Man</li>
-    <li class="ui-state-default list-group-item">Captain America</li>
+    <li class="ui-state-default list-group-item bg-info">Captain America</li>
   </ul>
+
+  <!-- Modal -->
+  <div class="modal fade custom-modal" id="class-modal" tabindex="-1" role="dialog"
+    aria-labelledby="class-modal-form" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="class-modal-form">MCOC Classes</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="class-form">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="class-type-input">Favorite Class</label>
+              <select class="form-control" id="class-type-input">
+                <option selected disabled>Pick one...</option>
+                <option value="Skill">Skill</option>
+                <option value="Mutant">Mutant</option>
+                <option value="Tech">Tech</option>
+                <option value="Cosmic">Cosmic</option>
+                <option value="Mystic">Mystic</option>
+                <option value="Science">Science</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn custom-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- moment Js  -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
@@ -164,7 +199,7 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- custom js -->
   <script type="text/javascript" src="./assets/js/script.js"></script>
-  
+
 </body>
 
 </html>
