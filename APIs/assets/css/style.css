@@ -82,3 +82,23 @@ main {
   margin-left: 5%;
   margin-right: 5%;
 }
+
+#date-picker-form {
+  margin: 30px;
+  margin-top: 50px;
+  width: 70%;
+}
+
+#sortable {
+  list-style-type: none;
+  color: white;
+  width: 70%;
+  margin: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#sortable li {
+  color: black
+}
+

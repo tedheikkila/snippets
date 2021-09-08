@@ -121,8 +121,27 @@ bossList.on('click', '.villain', function (event) {
   }
 });
 
-// Bootstrap; see index.html (components, layouts, utils, extensions)
-// Neat shortcut: https://hackerthemes.com/bootstrap-cheatsheet/
+//Bootstrap; see index.html (components, layouts, utils, extensions)
+  // Guide/shortcut: https://hackerthemes.com/bootstrap-cheatsheet/
+
+//jQuery date picker
+$(function () {
+  $('#datepicker').datepicker({
+    changeMonth: true,
+    changeYear: true,
+  });
+});
+
+//jQuery dialog box
+$(function () {
+  $('#dialog').dialog();
+});
+
+//jQuery sortables
+$(function () {
+  $('#sortable').sortable();
+  $('#sortable').disableSelection();
+});
 
 
 
