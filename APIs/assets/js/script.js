@@ -143,6 +143,9 @@ $(function () {
   $('#sortable').disableSelection();
 });
 
+//moment.js; https://momentjs.com/
+let today = moment()
+$("#moment-date").text(today.format("MM/DD/YY"));
 
 
 
