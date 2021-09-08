@@ -1,6 +1,6 @@
 ## Terminal commands
 
-- killall node (kills all active node terminals)
+- killall node (kills all active node terminals; could only be applicable for Apple PCs?)
 
 ## Git commands
 - git log (shows the last commit history; sorted by time/date committed)
