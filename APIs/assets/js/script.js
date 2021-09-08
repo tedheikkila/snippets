@@ -109,20 +109,20 @@ bossList.on('click', '.villain', function (event) {
   let selectedBoss = event.target.innerHTML
   switch (selectedBoss) {
     case "Kang": console.log(selectedBoss + ' is the 1st boss (Tech class)')
-    break
+      break
     case "Thanos": console.log(selectedBoss + ' is the 2nd boss (Cosmic class)')
-    break
+      break
     case "Maestro": console.log(selectedBoss + ' is the 3rd boss (Superior class)')
-    break
+      break
     case "The Collector": console.log(selectedBoss + ' is the 4th boss (Superior class)')
-    break
+      break
     case "The Grandmaster": console.log(selectedBoss + ' is the 5th and final boss (Superior class)')
-    break
+      break
   }
 });
 
 //Bootstrap; see index.html (components, layouts, utils, extensions)
-  // Guide/shortcut: https://hackerthemes.com/bootstrap-cheatsheet/
+// Guide/shortcut: https://hackerthemes.com/bootstrap-cheatsheet/
 
 //jQuery date picker
 $(function () {
@@ -147,13 +147,17 @@ $(function () {
 let today = moment()
 $("#moment-date").text(today.format("MM/DD/YY"));
 
+//jQuery modals
+let classModalForm = $('#class-form');
+let classModalTypeInput = $("#class-type-input")
 
+const modalFormSubmit = (event) => {
+  event.preventDefault();
 
+  let modalClassType = classModalTypeInput.val();
 
+  console.log(modalClassType)
+}
 
-
-
-
-
-
+classModalForm.on('submit', modalFormSubmit);
 

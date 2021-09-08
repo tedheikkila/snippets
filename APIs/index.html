@@ -153,13 +153,16 @@
     <li class="ui-state-default list-group-item bg-info">Captain America</li>
   </ul>
 
-  <!-- Modal -->
-  <div class="modal fade custom-modal" id="class-modal" tabindex="-1" role="dialog"
-    aria-labelledby="class-modal-form" aria-hidden="true">
+  <!-- button and corresponding modal -->
+  <button class="btn custom-btn" id="modal-btn" data-toggle="modal" data-target="#class-modal">Select favorite
+    class</button>
+
+  <div class="modal fade custom-modal" id="class-modal" tabindex="-1" role="dialog" aria-labelledby="class-modal-form"
+    aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="class-modal-form">MCOC Classes</h5>
+          <h5 class="modal-title" id="class-modal-form">Select your favorite class</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -167,7 +170,6 @@
         <form id="class-form">
           <div class="modal-body">
             <div class="form-group">
-              <label for="class-type-input">Favorite Class</label>
               <select class="form-control" id="class-type-input">
                 <option selected disabled>Pick one...</option>
                 <option value="Skill">Skill</option>
@@ -181,7 +183,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn custom-btn">Submit</button>
+            <button type="submit" class="btn custom-btn bg-danger" id="modal-submit-btn">Submit</button>
           </div>
         </form>
       </div>
