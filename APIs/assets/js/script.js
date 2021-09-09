@@ -95,14 +95,14 @@ function handleChampSubmit(event) {
 
 champForm.on('submit', handleChampSubmit);
 
-//DOM traversal
+// jQuery DOM traversal
 $('.class-radio').children().eq(5).append($(`
 <span>
   <input type="radio" id="r7" value="superior" name="champ-select"/>
   <label for="r7">Superior</label>
 </span>`));
 
-// event delegation
+// jQuery event delegation
 let bossList = $(".villain-list")
 
 bossList.on('click', '.villain', function (event) {
@@ -132,7 +132,7 @@ $(function () {
   });
 });
 
-//jQuery dialog box
+//jQuery dialog box (html commented out)
 $(function () {
   $('#dialog').dialog();
 });
@@ -160,4 +160,5 @@ const modalFormSubmit = (event) => {
 }
 
 classModalForm.on('submit', modalFormSubmit);
+
 

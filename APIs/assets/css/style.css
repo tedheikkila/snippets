@@ -105,11 +105,16 @@ main {
 
 #modal-btn {
   color: var(--red);
-  border: 5px solid var(--red)
+  border: 5px solid var(--red);
+  background-color: black;
 }
 
-#modal-btn:hover, .modal-title {
+.modal-title {
   color: black
+}
+
+#modal-btn:hover {
+  color: white
 }
 
 #modal-submit-btn {
