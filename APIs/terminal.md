@@ -1,6 +1,7 @@
 ## Terminal commands
 
 - killall node (kills all active node terminals; could only be applicable for Apple PCs?)
+- curl {https://api.github.com/users} (example of a curl request; returns newest 30 users)
 
 ## Git commands
 - git log (shows the last commit history; sorted by time/date committed)

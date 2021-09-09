@@ -121,3 +121,8 @@ main {
   color: var(--white)
 }
 
+#fetch-btn {
+  border: solid var(--white) 5px;
+  border-radius: 20px;
+}
+

@@ -161,4 +161,26 @@ const modalFormSubmit = (event) => {
 
 classModalForm.on('submit', modalFormSubmit);
 
+// ------------------- server-side calls -----------------------------------
 
+// Server-side API calls (Marvel's API)
+let fetchBtn = $('#fetch-btn');
+
+const getApi = () => {
+
+  // http://gateway.marvel.com/v1/public/comics?apikey=yourPublicApiKey
+
+  const apiKey = 'ed4e7fdd835748db686ed176cce6d847'
+  let requestUrl = 'http://gateway.marvel.com/v1/public/characters?apikey=' + apiKey;
+
+  fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data)
+     
+    });
+}
+
+fetchBtn.on('click', getApi);
