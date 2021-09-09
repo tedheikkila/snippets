@@ -163,15 +163,18 @@ classModalForm.on('submit', modalFormSubmit);
 
 // ------------------- server-side calls -----------------------------------
 
-// Server-side API calls (Marvel's API)
+// Server-side API calls (Bored Api) (not Marvel, see comment below)
 let fetchBtn = $('#fetch-btn');
+let boredOutput = $('#bored-w-marvel')
 
 const getApi = () => {
 
-  // http://gateway.marvel.com/v1/public/comics?apikey=yourPublicApiKey
+  // Marvel Developer requires client-based apps to use a pre-authorized domain URL
+  // therefore using Bored API instead, however, this is Marvel doc's syntax for request
+  // http://gateway.marvel.com/v1/public/characters?apikey=yourPublicApiKey
+  // after that you'd add domain of Heroku app to Marvel Developer account
 
-  const apiKey = 'ed4e7fdd835748db686ed176cce6d847'
-  let requestUrl = 'http://gateway.marvel.com/v1/public/characters?apikey=' + apiKey;
+  let requestUrl = 'https://www.boredapi.com/api/activity/'
 
   fetch(requestUrl)
     .then(function (response) {
@@ -179,7 +182,9 @@ const getApi = () => {
     })
     .then(function (data) {
       console.log(data)
-     
+      let boredActivity = data.activity
+      console.log(boredActivity)
+      boredOutput.text(boredActivity)
     });
 }
 
