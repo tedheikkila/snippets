@@ -76,7 +76,7 @@ refreshBtn.on('click', () => {
   location.reload()
 })
 
-//jQuery forms
+// jQuery forms
 let champForm = $('#champ-form');
 let champName = $('input[name="champ-name"]');
 
@@ -121,10 +121,10 @@ bossList.on('click', '.villain', function (event) {
   }
 });
 
-//Bootstrap; see index.html (components, layouts, utils, extensions)
+// Bootstrap; see index.html (components, layouts, utils, extensions)
 // Guide/shortcut: https://hackerthemes.com/bootstrap-cheatsheet/
 
-//jQuery date picker
+// jQuery date picker
 $(function () {
   $('#datepicker').datepicker({
     changeMonth: true,
@@ -132,22 +132,22 @@ $(function () {
   });
 });
 
-//jQuery dialog box (html commented out)
+// jQuery dialog box (html commented out)
 $(function () {
   $('#dialog').dialog();
 });
 
-//jQuery sortables
+// jQuery sortables
 $(function () {
   $('#sortable').sortable();
   $('#sortable').disableSelection();
 });
 
-//moment.js; https://momentjs.com/
+// moment.js; https://momentjs.com/
 let today = moment()
 $("#moment-date").text(today.format("MM/DD/YY"));
 
-//jQuery modals
+// jQuery modals
 let classModalForm = $('#class-form');
 let classModalTypeInput = $("#class-type-input")
 
@@ -161,18 +161,20 @@ const modalFormSubmit = (event) => {
 
 classModalForm.on('submit', modalFormSubmit);
 
-// ------------------- server-side calls -----------------------------------
+// ------------------- server-side API calls (Bored api) -----------------------------------
 
-// Server-side API calls (Bored Api) (not Marvel, see comment below)
+// API request, fetch method (vanilla js)
 let fetchBtn = $('#fetch-btn');
 let boredOutput = $('#bored-w-marvel')
+let activityCost = $(".activity-cost")
+let appendActivity = $(".append-activity")
 
 const getApi = () => {
 
   // Marvel Developer requires client-based apps to use a pre-authorized domain URL
   // therefore using Bored API instead, however, this is Marvel doc's syntax for request
   // http://gateway.marvel.com/v1/public/characters?apikey=yourPublicApiKey
-  // after that you'd add domain of Heroku app to Marvel Developer account
+  // after that you'd add domain of Heroku app to Marvel Developer account as a referrer
 
   let requestUrl = 'https://www.boredapi.com/api/activity/'
 
@@ -181,11 +183,69 @@ const getApi = () => {
       return response.json();
     })
     .then(function (data) {
-      console.log(data)
       let boredActivity = data.activity
-      console.log(boredActivity)
       boredOutput.text(boredActivity)
+      let actualCost = data.price * 50
+
+      if (actualCost == 0) {
+        activityCost.text("Hurray! It's free")
+      } else
+        activityCost.text(`Activity cost: $${actualCost}`)
     });
 }
 
-fetchBtn.on('click', getApi);
+// fetchBtn.on('click', getApi)
+
+// API request, ajax (jQuery)
+const getAjax = (event) => {
+  let requestUrl = 'https://www.boredapi.com/api/activity/'
+
+  $.ajax({
+    url: requestUrl,
+    method: 'GET',
+  }).then(function (data) {
+    console.log(data);
+
+    let boredActivity = data.activity
+    boredOutput.text(boredActivity)
+    let actualCost = data.price * 50
+
+    if (actualCost == 0) {
+      activityCost.text("Hurray it's free")
+      // appendActivity.append("")
+    } else
+      activityCost.text(`Activity cost: $${actualCost}`)
+
+  });
+
+}
+
+fetchBtn.on('click', getAjax);
+
+// status codes
+// remember to use Network tab for a new API in question
+// then cmd + R to see status codes (useful when debugging json response for a new API)
+// status 200 is a successful response
+// status 404 is a failed response
+
+// deconstructing parameters & fetch options
+// fetch('https://api.github.com/gists/public?since=2020-10-10&per_page=5', {
+//   //fetch('https://api.github.com/gists/public?since=2020-10-10&per_page=5) 
+//   // ^^ line above is the no option or more common syntax
+//   method: 'GET', //GET is default
+//   credentials: "same-origin",  // include, same-origin, omit
+//   redirect: "follow" // manual, follow, error
+
+// })
+// .then(function (response) {
+//   return response.json();
+// })
+// .then(function (data) {
+//   console.log(data);
+// });
+
+// document location
+console.log(document.location)
+console.log(document.URL)
+
+
