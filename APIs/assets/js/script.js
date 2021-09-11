@@ -215,8 +215,7 @@ const getAjax = (event) => {
       // appendActivity.append("")
     } else
       activityCost.text(`Activity cost: $${actualCost}`)
-
-  });
+  })
 
 }
 
@@ -231,21 +230,38 @@ fetchBtn.on('click', getAjax);
 // deconstructing parameters & fetch options
 // fetch('https://api.github.com/gists/public?since=2020-10-10&per_page=5', {
 //   //fetch('https://api.github.com/gists/public?since=2020-10-10&per_page=5) 
-//   // ^^ line above is the no option or more common syntax
+//   // ^^ line above is the no option or more common fetch syntax
 //   method: 'GET', //GET is default
 //   credentials: "same-origin",  // include, same-origin, omit
 //   redirect: "follow" // manual, follow, error
 
 // })
 // .then(function (response) {
+  // if (!response.ok) {
+  //   throw response.json();
+  // }
 //   return response.json();
 // })
 // .then(function (data) {
 //   console.log(data);
+// })
+// .catch(function (error) {
+//   alert('Unable to connect to API');
 // });
 
 // document location
-console.log(document.location)
+// console.log(document.location)
 console.log(document.URL)
 
+// searching on one page, then redirecting to second page
 
+  // on first page (set whatever user searches for)
+    // let queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
+    // location.assign(queryString);
+
+  // on second page redirect (on load call, then get whatever user search for and manipulate from there)
+    // let searchParamsArr = document.location.search.split('&');
+    // let query = searchParamsArr[0].split('=').pop();
+    // let format = searchParamsArr[1].split('=').pop();
+  
+    // searchApi(query, format);
