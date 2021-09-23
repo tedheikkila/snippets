@@ -67,26 +67,43 @@ console.log(`Hello I am the ${firstUser.firstName} ${firstUser.lastName} who use
 
 // arg v's
 // argv[0] = usr; argv[1] = file loc; argv[2, 3, etc] are typed in after node index.js {argv2} {argv3} {argvEtc}
-console.log(process.argv);
+console.log(process.argv[1]);
 
 // fs read & write (plus ternary operator syntax)
 const fs = require('fs');
 
-fs.readFile('./assets/data.csv', 'utf8', (err, data) =>
-  err ? console.error(err) : console.log(data)
-);
+// fs.readFile('./assets/data.csv', 'utf8', (err, data) =>
+//   err ? console.error(err) : console.log(data)
+// );
 
-fs.writeFile('./assets/log.txt', process.argv[2], (err) =>
-  err ? console.error(err) : console.log('Success')
-);
+// fs.writeFile('./assets/log.txt', process.argv[2], (err) =>
+//   err ? console.error(err) : console.log('Success')
+// );
 
 // module.exports 
 const exportedUser = require('./assets/export.js');
 
 console.log(exportedUser.lastUser);
-
 console.log(exportedUser.linear());
 
-// npm install or npm i; .gitignore (containing node_modules/)
+// npm install or npm i {packageName} i.e. npm i inquirer; .gitignore (containing node_modules/)
 
 // inquirer
+const inquirer = require('inquirer');
+
+inquirer
+  .prompt([
+    {
+      type: 'input',
+      message: 'What is your username?',
+      name: 'username',
+    },
+    {
+      type: 'input',
+      message: 'What is your favorite color?',
+      name: 'color',
+    },
+  ])
+  .then((res) =>
+      console.log(`Hello ${res.username}. Your future looks ${res.color}`)
+  );
