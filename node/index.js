@@ -88,22 +88,46 @@ console.log(exportedUser.linear());
 
 // npm install or npm i {packageName} i.e. npm i inquirer; .gitignore (containing node_modules/)
 
-// inquirer
+// inquirer (common prompt types: list, checkbox, confirm, input, number, password )
 const inquirer = require('inquirer');
 
-inquirer
-  .prompt([
-    {
-      type: 'input',
-      message: 'What is your username?',
-      name: 'username',
-    },
-    {
-      type: 'input',
-      message: 'What is your favorite color?',
-      name: 'color',
-    },
-  ])
-  .then((res) =>
-      console.log(`Hello ${res.username}. Your future looks ${res.color}`)
-  );
+// inquirer
+//   .prompt([
+//     {
+//       type: 'input',
+//       message: 'What is your username?',
+//       name: 'username',
+//     },
+//     {
+//       type: 'input',
+//       message: 'What is your favorite color?',
+//       name: 'color',
+//     },
+//   ])
+//   .then((res) =>
+//       console.log(`Hello ${res.username}. Your future looks ${res.color}`)
+//   );
+
+// rest 
+const numArgs = (...args) => {
+  return `You passed in ${args.length} arguments`
+}
+
+console.log(numArgs(0, 1, 2, "hello"))
+
+// spread
+const mammals = ["human", "dog", "elephant"]
+const animals = ["seagull", ...mammals, "lizard"]
+
+console.log(animals)
+
+// destructuring objects
+sasuke = {
+  name: "Sasuke Uchiha",
+  rivals: ["Itachi", "Naruto", "Madara"]
+}
+
+const logSasuke = ({ name, rivals }) =>
+  console.log(`${name}'s rivals are: ${rivals[0]}, ${rivals[1]}, and ${rivals[2]}.`);
+
+logSasuke(sasuke);
