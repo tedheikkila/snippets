@@ -4,7 +4,7 @@ console.log("Hello user");
 // arrow fcns (let & const; const = constant reference; let = variable reference)
 // can modify const object and array (push, ++, etc), but can't re-assign 
 const hello = (userName) => {
-    console.log("hello again " + userName)
+  console.log("hello again " + userName)
 }
 let userName = "user"
 hello(userName)
@@ -19,48 +19,48 @@ while (c < 5) {
 
 // use reg fcns for object methods
 let user = {
-    name: "User",
-    status: function() {
-      console.log(this.name + " is a user");
+  name: "User",
+  status: function () {
+    console.log(this.name + " is a user");
     //   setTimeout(() => console.log(this.name + "name"), 100);
-    }
-  };
-  
-  user.status();
+  }
+};
 
-  // functional loops (forEach, filter, map)
-  const users = [
-    {name: "Sam", age: 20},
-    {name: "Stella", age: 25},
-    {name: "Mara", age: 30},
-  ]
+user.status();
 
-  users.forEach(user => console.log(user.name))
+// functional loops (forEach, filter, map)
+const users = [
+  { name: "Sam", age: 20 },
+  { name: "Stella", age: 25 },
+  { name: "Mara", age: 30 },
+]
 
-  const justOldEnough = users.filter(function(user) {
-      return user.age >= 25
-  })
+users.forEach(user => console.log(user.name))
 
-  console.log(justOldEnough)
+const justOldEnough = users.filter(function (user) {
+  return user.age >= 25
+})
 
-  const oldEnoughTest = users.map(user => {
-    const person = { ...user };
+console.log(justOldEnough)
 
-    if (person.age >= 25) {
-      person.justOldEnough = true;
-    } else {
-      person.justOldEnough = false;
-    }
-    return person;
-  });
+const oldEnoughTest = users.map(user => {
+  const person = { ...user };
+
+  if (person.age >= 25) {
+    person.justOldEnough = true;
+  } else {
+    person.justOldEnough = false;
+  }
+  return person;
+});
 
 console.log(oldEnoughTest)
 
 // template literals
 const firstUser = {
-    firstName: "First",
-    lastName: "User",
-    PC: "Mac"
+  firstName: "First",
+  lastName: "User",
+  PC: "Mac"
 }
 
 console.log(`Hello I am the ${firstUser.firstName} ${firstUser.lastName} who uses a ${firstUser.PC} `)
@@ -163,7 +163,7 @@ Movie.prototype.logInfo = function () {
   if (this.releaseDate > 2021) {
     console.log(`${this.title} will be released in ${this.releaseDate}`);
   } else
-  console.log(`${this.title} was released in ${this.releaseDate}`);
+    console.log(`${this.title} was released in ${this.releaseDate}`);
 };
 
 batman.logInfo();
@@ -195,3 +195,36 @@ willGoOutside
   .then(playGames)
   .then((resolved) => console.log(resolved))
   .catch((err) => console.error(err + '...too cool for school'));
+
+
+// classes 
+class Box {
+  constructor(area, perimeter) {
+    this.area = area;
+    this.perimeter = perimeter;
+  }
+
+  consoleInfo() {
+    console.log(`Area: ${this.area} sq ft`);
+    console.log(`Perimeter: ${this.perimeter} ft`);
+  }
+}
+
+const box = new Box(100, 40);
+
+box.consoleInfo();
+
+// subclasses
+class RectangleBox extends Box {
+  constructor(sideA, sideB) {
+    const area = sideA * sideB;
+    const perimeter = sideA * 2 + sideB * 2;
+
+    super(area, perimeter);
+    this.sideA = sideA;
+    this.sideB = sideB;
+  }
+}
+
+const rectangleBox = new RectangleBox(10, 5);
+rectangleBox.consoleInfo();
