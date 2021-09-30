@@ -131,3 +131,67 @@ const logSasuke = ({ name, rivals }) =>
   console.log(`${name}'s rivals are: ${rivals[0]}, ${rivals[1]}, and ${rivals[2]}.`);
 
 logSasuke(sasuke);
+
+// constructors
+
+function Person(employed, celebration) {
+  this.employed = employed;
+  this.celebration = celebration;
+  this.makeNoise = () => {
+    if (this.employed === true) {
+      console.log(this.celebration);
+    }
+  };
+}
+
+const girls = new Person(true, 'Yippee!');
+const guys = new Person(false, 'Awesome!');
+
+girls.makeNoise();
+guys.makeNoise();
+
+// prototype methods
+function Movie(title, releaseDate) {
+  this.title = title;
+  this.releaseDate = releaseDate;
+}
+
+const batman = new Movie('The Dark Knight', 2008);
+const robin = new Movie('Robin', 2030);
+
+Movie.prototype.logInfo = function () {
+  if (this.releaseDate > 2021) {
+    console.log(`${this.title} will be released in ${this.releaseDate}`);
+  } else
+  console.log(`${this.title} was released in ${this.releaseDate}`);
+};
+
+batman.logInfo();
+robin.logInfo();
+
+// promises
+const homeworkDone = true;
+
+const willGoOutside = new Promise((resolve, reject) => {
+  if (homeworkDone) {
+    const reward = {
+      name: 'play',
+      desired: true,
+    };
+    resolve(reward);
+
+  } else {
+    const issue = new Error('Kid did not finish homework');
+    reject(issue);
+  }
+});
+
+const playGames = (reward) => {
+  const message = `Kid gets to ${reward.name} outside`;
+  return Promise.resolve(message);
+};
+
+willGoOutside
+  .then(playGames)
+  .then((resolved) => console.log(resolved))
+  .catch((err) => console.error(err + '...too cool for school'));
