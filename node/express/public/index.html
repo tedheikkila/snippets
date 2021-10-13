@@ -23,7 +23,18 @@
         Click to navigate to these routes:
         <a href="routes"><code>/routes</code></a> or
         <a href="send"><code>/send</code></a>
+        <div id="go-here" class=m-5></div>
+        <div id="terms" class=m-5></div>
+        <button class="p-3" id="term-btn">Fetch Terms</button>
       </article>
     </div>
+    <script>
+      let appendIt = document.querySelector("#go-here")
+      let test = document.createElement('div')
+      test.innerHTML = "Check out some JSON terms at 3001/terms"
+      appendIt.append(test)
+    </script>
+
+    <script src="./index.js"></script>
   </body>
 </html>

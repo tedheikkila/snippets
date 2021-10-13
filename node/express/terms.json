@@ -1,0 +1,17 @@
+[
+  {
+    "term": "Apple",
+    "definition": "A red fruit",
+    "url": "https://en.wikipedia.org/wiki/Apple"
+  },
+  {
+    "term": "Banana",
+    "definition": "A yellow fruit",
+    "url": "https://en.wikipedia.org/wiki/Banana"
+  },
+  {
+    "term": "Carrot",
+    "definition": "An orange fruit",
+    "url": "https://en.wikipedia.org/wiki/Carrot"
+  }
+]
