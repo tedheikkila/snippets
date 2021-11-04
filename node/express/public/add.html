@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Post Testing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Adding Posts</h1>
+        <hr />
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3><strong>Add new post here</strong></h3>
+            </div>
+            <div class="card-body">
+              <form method="POST" role="form">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" />
+                </div>
+              </form>
+              <br />
+              <div class="text-right">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-md"
+                  id="add-btn"
+                > Add Post
+                </button>
+              </div>
+              <a href="/"><code class="p-3" id="add-return-home">Return to home</code></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      
+      const addBtn = document.getElementById('add-btn');
+      
+      addBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        let postName = document.getElementById('name').value.trim();
+        
+        let newPost = {
+          name: `${postName}`,
+        };
+
+        fetch('/api/posts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newPost),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log('add.html', data);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      });
+    </script>
+  </body>
+</html>

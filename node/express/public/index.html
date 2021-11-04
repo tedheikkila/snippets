@@ -5,6 +5,7 @@
     <title>Express</title>
 
     <link rel="stylesheet" href="jass.css" />
+    <link rel="stylesheet" href="style.css" />
     <style>
       body {
         padding-top: 50px;
@@ -20,9 +21,11 @@
         <h1 class="">Express Routing</h1>
       </div>
       <article class="text-primary p-5">
-        Click to navigate to these routes:
-        <a href="routes"><code>/routes</code></a> or
-        <a href="send"><code>/send</code></a>
+        Click to navigate to these routes:<br><br>
+        <a id="routes" href="routes"><code>/routes</code></a><br><br>
+        <a href="send"><code>/send</code></a><br><br>
+        <a id="add" href="add"><code>/add</code></a><br><br>
+        <a href="view"><code>/view</code></a>
         <div id="go-here" class=m-5></div>
         <div id="terms" class=m-5></div>
         <button class="p-3" id="term-btn">Fetch Terms</button>
@@ -32,6 +35,7 @@
       let appendIt = document.querySelector("#go-here")
       let test = document.createElement('div')
       test.innerHTML = "Check out some JSON terms at 3001/terms"
+      test.setAttribute("style", "margin-left: -25px")
       appendIt.append(test)
     </script>
 
